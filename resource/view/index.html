@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{.ws}}</title>
+    <script src="/static/js/layer.js"></script>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="/static/js/message.js"></script>
+    <link rel="stylesheet" href="/static/css/base.css" type="text/css" />
+</head>
+<body>
+<div class="talk_con">
+    <!---->
+    <div class="basic">
+        <span class="basic-warp" id="basic-info">
+            <span class="basic-dot basic-red"></span>
+            <span class="basic-dot basic-yellow"></span>
+            <span class="basic-dot basic-green"></span>
+            <span id="number"></span>
+        </span>
+    </div>
+    <div class="talk_show" id="words"></div>
+    <div class="talk_input">
+        <input type="button" value="退出" class="close_sub" onclick="ws.close();" id="closesub">
+        <input type="text" placeholder="发送消息" class="talk_word" id="talkwords">
+        <input type="button" value="发送" onclick="sendmsg()" class="talk_sub" id="talksub">
+        <input type="hidden" value="{{.ws}}" id="ws-url">
+    </div>
+</div>
+</body>
+</html>
